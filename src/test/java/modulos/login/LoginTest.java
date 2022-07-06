@@ -15,7 +15,7 @@ public class LoginTest {
     @BeforeEach
     public void beforeEach() {
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\ChromeDriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver 103.0.5060.53\\chromedriver.exe");
         this.navegador = new ChromeDriver();
 
         this.navegador.manage().window().maximize();

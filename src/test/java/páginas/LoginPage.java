@@ -11,21 +11,21 @@ public class LoginPage {
     }
 
     public LoginPage inserirUsuario(String usuario) {
-        this.navegador.findElement(By.name("txtUsuario")).sendKeys(usuario);
+        this.navegador.findElement(By.name("username")).sendKeys(usuario);
         return this;
     }
 
     public LoginPage inserirSenha(String senha) {
-        this.navegador.findElement(By.name("txtPassword")).sendKeys("senha");
+        this.navegador.findElement(By.name("password")).sendKeys("senha");
         return this;
     }
 
     public LoginPage submeterLoginInvalido() {
-        this.navegador.findElement(By.id("divContentLogin")).findElement(By.cssSelector("button[class]")).click();
+        this.navegador.findElement(By.className("cta-wrapper")).click();
         return this;
     }
 
     public String caputurarMensagemApresentada() {
-        return this.navegador.findElement(By.cssSelector("div[class*='password'] div[class='modal-content'] p")).getText();
+        return this.navegador.findElement(By.cssSelector("div[id*='modal-default'] div[class='modal-content'] p")).getText();
     }
 }
